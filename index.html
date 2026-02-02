@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sami Ocean | Premium Seafood Experience</title>
+    <meta name="description"
+        content="Sami Ocean - Experience the finest authentic seafood and Tajines from the Atlantic Coast in a premium dining atmosphere.">
+    <!-- Fonts -->
+     <link rel="icon" type="image/png" href="srs/logo samiocean.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-anchor"></i>
+                <div class="logo-text">
+                    <span>Sami</span>
+                    <span class="highlight">Ocean</span>
+                </div>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Our Menu</a>
+                <a href="#about" class="nav-link">Story</a>
+                <a href="#contact" class="nav-link btn-reserve">Book a Table</a>
+            </nav>
+
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#menu" class="mobile-link">Menu</a>
+            <a href="#about" class="mobile-link">Our Story</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in-up">
+                <span class="hero-subtitle">Taste the Atlantic</span>
+                <h1>Exquisite Seafood <br> & Authentic Tajines</h1>
+                <p>A culinary journey inspired by the depths of the ocean and the traditions of Morocco.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">Discover Menu</a>
+                    <a href="#contact" class="btn btn-outline">Reserve Now</a>
+                </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <a href="#menu" class="scroll-down">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Featured / About Preview -->
+        <section id="about" class="about-preview section-padding">
+            <div class="container about-grid">
+                <div class="about-image reveal-left">
+                    <img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Fresh Catch Display">
+                    <div class="experience-badge">
+                        <span class="years">15+</span>
+                        <span class="text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-text reveal-right">
+                    <h4 class="section-subtitle">Our Story</h4>
+                    <h2 class="section-title">Freshness Meaning <br> <span>True Quality</span></h2>
+                    <p>Located in the heart of the port, Sami Ocean brings you the freshest catch daily. Our chefs
+                        masterfully blend traditional Moroccan spices with modern culinary techniques to create
+                        unforgettable seafood dishes.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check-double"></i> Daily Fresh Catch from Atlantic</li>
+                        <li><i class="fa-solid fa-check-double"></i> Authentic Moroccan Spices</li>
+                        <li><i class="fa-solid fa-check-double"></i> Premium Dining Atmosphere</li>
+                    </ul>
+                    <a href="#menu" class="btn-text">View Full Menu <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center reveal-bottom">
+                    <h4 class="section-subtitle">Culinary Delights</h4>
+                    <h2 class="section-title">Chef's Signature Menu</h2>
+                    <p class="section-description">Explore our curated selection of fine seafood dishes, crafted with
+                        passion.</p>
+                </div>
+
+                <div class="menu-tabs">
+                    <button class="tab-btn active" data-filter="all">All</button>
+                    <button class="tab-btn" data-filter="starters">Starters</button>
+                    <button class="tab-btn" data-filter="mains">Mains</button>
+                    <button class="tab-btn" data-filter="platters">Platters</button>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item reveal-bottom" data-category="platters">
+                        <div class="menu-img">
+                            <img src="srs/royal crilled platter.jpg" alt="Royal Platter">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h3>Royal Grilled Platter</h3>
+                                <span class="price">180 DH</span>
+                            </div>
+                            <p class="menu-desc">A lavish mix of sole, calamari, shrimp, and seasonal catch, grilled
+                                over charcoal.</p>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item reveal-bottom" data-category="starters">
+                        <div class="menu-img">
+                            <img src="srs/Gambas Pil-Pil.jpg" alt="Gambas Pil Pil">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h3>Gambas Pil-Pil</h3>
+                                <span class="price">85 DH</span>
+                            </div>
+                            <p class="menu-desc">Sizzling shrimp in hot garlic olive oil, infused with dried red
+                                peppers.</p>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-item reveal-bottom" data-category="mains">
+                        <div class="menu-img">
+                            <img src="srs/Atlantic Mussels Tajine.jpg" alt="Mussels Tajine">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h3>Atlantic Mussels Tajine</h3>
+                                <span class="price">75 DH</span>
+                            </div>
+                            <p class="menu-desc">Locally sourced mussels slow-cooked in a rich tomato & chermoula sauce.
+                            </p>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-item reveal-bottom" data-category="mains">
+                        <div class="menu-img">
+                            <img src="srs/Valencian Paella.jpg" alt="Seafood Paella">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h3>Valencian Paella</h3>
+                                <span class="price">120 DH</span>
+                            </div>
+                            <p class="menu-desc">Saffron-infused rice loaded with prawns, clams, mussels, and squid.</p>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="menu-item reveal-bottom" data-category="platters">
+                        <div class="menu-img">
+                            <img src="srs/Golden Fried Trio.jpg" alt="Fried Trio">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h3>Golden Fried Trio</h3>
+                                <span class="price">95 DH</span>
+                            </div>
+                            <p class="menu-desc">Crispy golden calamari, white bait, and sole fillets served with tartar
+                                sauce.</p>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="menu-item reveal-bottom" data-category="mains">
+                        <div class="menu-img">
+                            <img src="srs/Lobster Thermidor.jpg" alt="Grilled Lobster">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h3>Lobster Thermidor</h3>
+                                <span class="price">350 DH</span>
+                            </div>
+                            <p class="menu-desc">Classic French dish consisting of a creamy mixture of cooked lobster
+                                meat.</p>
+                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Parallax -->
+        <section class="reservation-parallax">
+            <div class="parallax-overlay"></div>
+            <div class="container text-center reveal-bottom">
+                <h2>Book Your Ocean Experience</h2>
+                <p>Reserve a table for an unforgettable evening of fine dining.</p>
+                <div class="reservation-box">
+                    <div class="res-info">
+                        <span><i class="fa-solid fa-phone"></i> +212 600 000 000</span>
+                        <span><i class="fa-solid fa-envelope"></i> booking@samiocean.com</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <i class="fa-solid fa-anchor"></i>
+                    <div class="logo-text">
+                        <span>Sami</span>
+                        <span class="highlight">Ocean</span>
+                    </div>
+                </a>
+                <p>Bringing the finest treasures of the Atlantic to your plate with elegance and tradition.</p>
+
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-links" style="margin-bottom: 25px;">
+                    <a href="https://www.instagram.com/sami-ocean" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/sami-ocean" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/212655555555" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-phone"></i> +212 655 555 555</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@samiocean.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">Story</a></li>
+                    <li><a href="#reservation">Reservation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Port of Casablanca, Morocco</li>
+                    <li><i class="fa-solid fa-phone"></i> +212 655 555 555</li>
+                    <li><i class="fa-solid fa-clock"></i> Daily: 12:00 PM - 11:30 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe for seasonal updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Sami Ocean. All Rights Reserved. Designed with Passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripte.js"></script>
+</body>
+
+</html>
