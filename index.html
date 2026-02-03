@@ -38,8 +38,17 @@
                 <a href="#menu" class="nav-link">Our Menu</a>
                 <a href="#about" class="nav-link">Story</a>
                 <a href="#contact" class="nav-link btn-reserve">Book a Table</a>
+                <button class="nav-plus-btn" id="openQuantityModal" aria-label="Add Quantity">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <!-- Cart Icon -->
+                <button class="cart-btn" id="openCartBtn" aria-label="Open Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartBadge" style="display:none">0</span>
+                </button>
             </nav>
 
+            <!-- single cart icon kept in desktop nav; mobile uses same control via responsive layout -->
             <button class="mobile-menu-btn" aria-label="Toggle Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -56,6 +65,26 @@
             <a href="#about" class="mobile-link">Our Story</a>
             <a href="#contact" class="mobile-link">Contact</a>
         </nav>
+    </div>
+
+    <!-- Quantity Modal -->
+    <div class="quantity-modal-overlay" id="quantityModal">
+        <div class="quantity-modal">
+            <button class="modal-close-btn" id="closeQuantityModal" aria-label="Close Modal">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3>Enter Quantity</h3>
+            <p>How many guests will be dining?</p>
+            <div class="quantity-input-group">
+                <button class="qty-btn" id="qtyMinus"><i class="fa-solid fa-minus"></i></button>
+                <input type="number" id="quantityInput" value="1" min="1" max="20">
+                <button class="qty-btn" id="qtyPlus"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <button class="btn btn-primary modal-confirm-btn" id="confirmQuantity">Confirm</button>
+        </div>
     </div>
 
     <main>
@@ -125,7 +154,7 @@
 
                 <div class="menu-grid">
                     <!-- Item 1 -->
-                    <div class="menu-item reveal-bottom" data-category="platters">
+                    <div class="menu-item reveal-bottom" data-category="platters" data-id="royal-platter" data-name="Royal Grilled Platter" data-price="180" data-image="srs/royal crilled platter.jpg">
                         <div class="menu-img">
                             <img src="srs/royal crilled platter.jpg" alt="Royal Platter">
                         </div>
@@ -136,12 +165,12 @@
                             </div>
                             <p class="menu-desc">A lavish mix of sole, calamari, shrimp, and seasonal catch, grilled
                                 over charcoal.</p>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="add-btn" aria-label="Add Royal Grilled Platter"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
 
                     <!-- Item 2 -->
-                    <div class="menu-item reveal-bottom" data-category="starters">
+                    <div class="menu-item reveal-bottom" data-category="starters" data-id="gambas-pilpil" data-name="Gambas Pil-Pil" data-price="85" data-image="srs/Gambas Pil-Pil.jpg">
                         <div class="menu-img">
                             <img src="srs/Gambas Pil-Pil.jpg" alt="Gambas Pil Pil">
                         </div>
@@ -152,12 +181,12 @@
                             </div>
                             <p class="menu-desc">Sizzling shrimp in hot garlic olive oil, infused with dried red
                                 peppers.</p>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="add-btn" aria-label="Add Gambas Pil-Pil"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
 
                     <!-- Item 3 -->
-                    <div class="menu-item reveal-bottom" data-category="mains">
+                    <div class="menu-item reveal-bottom" data-category="mains" data-id="mussels-tajine" data-name="Atlantic Mussels Tajine" data-price="75" data-image="srs/Atlantic Mussels Tajine.jpg">
                         <div class="menu-img">
                             <img src="srs/Atlantic Mussels Tajine.jpg" alt="Mussels Tajine">
                         </div>
@@ -168,12 +197,12 @@
                             </div>
                             <p class="menu-desc">Locally sourced mussels slow-cooked in a rich tomato & chermoula sauce.
                             </p>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="add-btn" aria-label="Add Atlantic Mussels Tajine"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
 
                     <!-- Item 4 -->
-                    <div class="menu-item reveal-bottom" data-category="mains">
+                    <div class="menu-item reveal-bottom" data-category="mains" data-id="valencian-paella" data-name="Valencian Paella" data-price="120" data-image="srs/Valencian Paella.jpg">
                         <div class="menu-img">
                             <img src="srs/Valencian Paella.jpg" alt="Seafood Paella">
                         </div>
@@ -183,11 +212,11 @@
                                 <span class="price">120 DH</span>
                             </div>
                             <p class="menu-desc">Saffron-infused rice loaded with prawns, clams, mussels, and squid.</p>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="add-btn" aria-label="Add Valencian Paella"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                     <!-- Item 5 -->
-                    <div class="menu-item reveal-bottom" data-category="platters">
+                    <div class="menu-item reveal-bottom" data-category="platters" data-id="golden-fried-trio" data-name="Golden Fried Trio" data-price="95" data-image="srs/Golden Fried Trio.jpg">
                         <div class="menu-img">
                             <img src="srs/Golden Fried Trio.jpg" alt="Fried Trio">
                         </div>
@@ -198,12 +227,12 @@
                             </div>
                             <p class="menu-desc">Crispy golden calamari, white bait, and sole fillets served with tartar
                                 sauce.</p>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="add-btn" aria-label="Add Golden Fried Trio"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
 
                     <!-- Item 6 -->
-                    <div class="menu-item reveal-bottom" data-category="mains">
+                    <div class="menu-item reveal-bottom" data-category="mains" data-id="lobster-thermidor" data-name="Lobster Thermidor" data-price="350" data-image="srs/lobster thermidor.jpg">
                         <div class="menu-img">
                             <img src="./srs/lobster thermidor.jpg" alt="Grilled Lobster">
                         </div>
@@ -214,7 +243,7 @@
                             </div>
                             <p class="menu-desc">Classic French dish consisting of a creamy mixture of cooked lobster
                                 meat.</p>
-                            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="add-btn" aria-label="Add Lobster Thermidor"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
 
@@ -303,6 +332,32 @@
         </div>
     </footer>
 
+    <!-- Cart Overlay & Slide-Out -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+    <aside id="cartSheet" class="cart-sheet" aria-hidden="true">
+        <div class="cart-sheet-header">
+            <h3>Your Cart</h3>
+            <div style="display:flex;gap:8px;align-items:center;">
+                <button class="btn" id="clearCartBtn" style="background:transparent;color:var(--accent);border:1px solid rgba(0,0,0,0.06);">Clear All</button>
+                <button class="modal-close-btn" id="cartCloseBtn" aria-label="Close Cart"><i class="fa-solid fa-times"></i></button>
+            </div>
+        </div>
+
+        <div id="emptyCart" class="empty-cart">Empty Cart</div>
+
+        <div id="cartContent" class="cart-content">
+            <div id="cartItems" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">0 DH</span>
+                </div>
+                <button class="btn btn-primary" id="cartCtaBtn"><i class="fa-solid fa-check"></i> Checkout</button>
+            </div>
+        </div>
+    </aside>
+
+    <script src="cart.js"></script>
     <script src="scripte.js"></script>
 </body>
 
